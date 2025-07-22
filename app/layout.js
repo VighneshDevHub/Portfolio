@@ -11,12 +11,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="relative min-h-screen w-full bg-[#0a1026] text-white">
+        {/* Background Gradient */}
         <div className="pointer-events-none fixed inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0c0c1e] to-black z-0" />
         </div>
-        <Navbar />
-        <main className="relative z-10">{children}</main>
-        <Footer />
+
+        {/* Main layout container with z-10 */}
+        <div className="relative z-10 flex flex-col min-h-screen">
+          <Navbar />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   )
