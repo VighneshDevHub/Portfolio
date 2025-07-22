@@ -1,14 +1,142 @@
-import React from 'react'
-import { CardHoverEffectDemo } from './CardHoverEffectDemo'
 
-const ProjectsSection = () => {
+"use client";
+import React from "react";
+import { StickyScroll } from "./ui/StickyScroll";
+import { Rocket, ShieldCheck, Code, Database } from "lucide-react";
+import { SiFlask, SiPostgresql, SiGoogle, SiChatbot, SiShieldsdotio,SiPython,SiFigma } from "react-icons/si";
+import { GoNorthStar } from 'react-icons/go'
+import { HoverBorderGradient } from "./ui/HoverBorderGradient";
+
+
+
+
+const projects = [
+  {
+    title: "NewsGuard AI",
+    description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
+    features: [
+      { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Uses Google Custom Search API to find real-time references and trusted sources." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Compares the article with external sources using LLMs to generate a truthfulness score." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: " Persists article data, user logs, and historical results using PostgreSQL." },
+    ],
+    tech: [
+      { icon: <SiPython className="text-blue-400 w-5 h-5" />, label: "Python" },
+      { icon: <SiFlask className="w-5 h-5 text-sky-500" />, label: "Flask" },
+      { icon: <SiPostgresql className="w-5 h-5 text-yellow-400" />, label: "PostgreSQL" },
+      { icon: <SiGoogle className="w-5 h-5 text-green-400" />, label: "Google Search API" },
+      { icon: <SiChatbot className="w-5 h-5 text-pink-500" />, label: "LLM (Ollama/GPT)" },
+      { icon: <SiShieldsdotio className="w-5 h-5 text-purple-500" />, label: "News Authenticity" },
+      { icon: <SiFigma className="text-purple-500 w-5 h-5" />, label: "Figma" }
+      
+    ],
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        NewsGuard-AI
+      </div>
+    ),
+  },
+
+  {
+    title: "NewsGuard AI",
+    description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
+    features: [
+      { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Uses Google Custom Search API to find real-time references and trusted sources." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Compares the article with external sources using LLMs to generate a truthfulness score." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: " Persists article data, user logs, and historical results using PostgreSQL." },
+    ],
+    tech: [
+      { icon: <SiFlask className="w-5 h-5 text-sky-500" />, label: "Flask" },
+      { icon: <SiPostgresql className="w-5 h-5 text-yellow-400" />, label: "PostgreSQL" },
+      { icon: <SiGoogle className="w-5 h-5 text-green-400" />, label: "Google Search API" },
+      { icon: <SiChatbot className="w-5 h-5 text-pink-500" />, label: "LLM (Ollama/GPT)" },
+      { icon: <SiShieldsdotio className="w-5 h-5 text-purple-500" />, label: "News Authenticity" },
+    ],
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        NewsGuard-AI
+      </div>
+    ),
+  },
+   {
+    title: "NewsGuard AI",
+    description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
+    features: [
+      { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Uses Google Custom Search API to find real-time references and trusted sources." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Compares the article with external sources using LLMs to generate a truthfulness score." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: " Persists article data, user logs, and historical results using PostgreSQL." },
+    ],
+    tech: [
+      { icon: <SiFlask className="w-5 h-5 text-sky-500" />, label: "Flask" },
+      { icon: <SiPostgresql className="w-5 h-5 text-yellow-400" />, label: "PostgreSQL" },
+      { icon: <SiGoogle className="w-5 h-5 text-green-400" />, label: "Google Search API" },
+      { icon: <SiChatbot className="w-5 h-5 text-pink-500" />, label: "LLM (Ollama/GPT)" },
+      { icon: <SiShieldsdotio className="w-5 h-5 text-purple-500" />, label: "News Authenticity" },
+    ],
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        NewsGuard-AI
+      </div>
+    ),
+  },
+   {
+    title: "NewsGuard AI",
+    description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
+    features: [
+      { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Uses Google Custom Search API to find real-time references and trusted sources." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Compares the article with external sources using LLMs to generate a truthfulness score." },
+      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: " Persists article data, user logs, and historical results using PostgreSQL." },
+    ],
+    tech: [
+      { icon: <SiPython className="text-blue-400 w-5 h-5" />, label: "Python" },
+      { icon: <SiFlask className="w-5 h-5 text-sky-500" />, label: "Flask" },
+      { icon: <SiPostgresql className="w-5 h-5 text-yellow-400" />, label: "PostgreSQL" },
+      { icon: <SiGoogle className="w-5 h-5 text-green-400" />, label: "Google Search API" },
+      { icon: <SiChatbot className="w-5 h-5 text-pink-500" />, label: "LLM (Ollama/GPT)" },
+      { icon: <SiShieldsdotio className="w-5 h-5 text-purple-500" />, label: "News Authenticity" },
+    ],
+    content: (
+      <div className="flex h-full w-full items-center justify-center text-white">
+        NewsGuard-AI
+      </div>
+    ),
+  },
+];
+
+
+export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full max-w-5xl mx-auto px-8 py-20">
-        <h2 className="text-3xl font-bold text-white mb-4">Projects</h2>
-        <div className="bg-white/5 border border-white/10 rounded-2xl p-8 shadow-lg backdrop-blur-md text-white/80">Project cards go here.</div>
-        <CardHoverEffectDemo/>
+    <section id="projects" className="w-full max-w-7xl mx-auto px-8 py-20 min-h-screen overflow-hidden">
+      <div className="text-center mb-5">
+
+        <div className=" flex justify-center text-center">
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="button"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+          >
+            <span className="text-white text-sm font-semibold">My Work</span>
+          </HoverBorderGradient>
+        </div>
+
+        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
+          Featured <span className="text-purple-500">Projetcs</span>
+        </h3>
+        <p className="text-gray-400 text-lg mt-2">
+          Explore tech, design, and strategies behind modern builds
+        </p>
+      </div>
+
+      
+      <div className="w-full py-4">
+        <StickyScroll content={projects} />
+      </div>
     </section>
-  )
+  );
 }
 
 export default ProjectsSection
+

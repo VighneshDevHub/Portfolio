@@ -1,8 +1,11 @@
 import React from 'react'
 import Link from "next/link"
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa"
-import Image from "next/image";
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaArrowRight } from "react-icons/fa"
 import { FlipWords } from './ui/FlipWords';
+import { HoverBorderGradient } from './ui/HoverBorderGradient';
+import { ArrowRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 
 const Hero = () => {
@@ -15,14 +18,25 @@ const Hero = () => {
                 <div className="absolute bottom-0 w-full h-40 bg-gradient-to-t from-purple-700 via-transparent to-transparent opacity-40 blur-2xl z-0" />
 
                 <div className="relative z-10 max-w-4xl mx-auto pt-20">
-                    <div className="inline-flex items-center mb-6 px-4 py-1.5 bg-white/10 border border-white/20 rounded-full text-sm font-medium backdrop-blur-sm">
-                        <span className="bg-blue-700  mr-2 rounded-full px-1.5">New</span>
-                        <span>NewsGuard-AI is Live ! →</span>
+
+
+                    <div className=" flex justify-center text-center">
+                        <HoverBorderGradient
+                            containerClassName="rounded-full"
+                            as="button"
+                            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                        >
+                            <div className="inline-flex items-center  py-1.5  text-sm  backdrop-blur-sm">
+                                <span className="bg-blue-700  mr-2 rounded-full px-1.5 font-">New</span>
+                                <span className="inline-flex items-center gap-1 group-hover:underline  ">
+                                    NewsGuard-AI is Live! <ChevronRight className="w-5 h-5" />
+                                </span>
+                            </div></HoverBorderGradient>
                     </div>
-                    
+
 
                     <div className="w-full text-gray-400 mt-4">
-                        <span className='text-xl'>Hello, I'm</span> <span className="text-white text-3xl font-semibold">Vighnesh Salunkhe,</span> <br /> 
+                        <span className='text-xl'>Hello, I'm</span> <span className="text-white text-3xl font-semibold">Vighnesh Salunkhe,</span> <br />
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
@@ -33,9 +47,9 @@ const Hero = () => {
                     </h1>
 
                     <div className='text-left ml-55'>
-                        <span className=' text-gray-400 text-xl mx-2 '>I'm a Professional</span> 
+                        <span className=' text-gray-400 text-xl mx-2 '>I'm a Professional</span>
                         <span className='text-blue-900 font-semibold text-3xl'>
-                            <FlipWords words={["Full Stack Developer!","AI/ML Enthusiast!","UI/UX Designer!","Mobile App Developer!", "Freelancer!"]} /> 
+                            <FlipWords words={["Full Stack Developer!", "AI/ML Enthusiast!", "UI/UX Designer!", "Mobile App Developer!", "Freelancer!"]} />
                         </span>
                     </div>
 
@@ -50,7 +64,7 @@ const Hero = () => {
                             href="mailto:your.email@example.com"
                             className="flex items-center gap-2 px-6 py-3 rounded-full border border-white/20 hover:bg-white/10 transition-all"
                         >
-                            <span>your.email@example.com</span>
+                            <span>vighneshsalunkhe949@gmail.com</span>
                         </a>
                     </div>
                 </div>
