@@ -3,14 +3,14 @@
 import React from "react";
 import { StickyScroll } from "./ui/StickyScroll";
 import { Rocket, ShieldCheck, Code, Database } from "lucide-react";
-import { SiFlask, SiPostgresql, SiGoogle, SiChatbot, SiShieldsdotio,SiPython,SiFigma } from "react-icons/si";
+import { SiFlask, SiPostgresql, SiGoogle, SiChatbot, SiShieldsdotio, SiPython, SiFigma } from "react-icons/si";
 import { GoNorthStar } from 'react-icons/go'
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
+import Image from "next/image";
 
 
 
-
-const projects = [
+const content = [
   {
     title: "NewsGuard AI",
     description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
@@ -28,17 +28,21 @@ const projects = [
       { icon: <SiChatbot className="w-5 h-5 text-pink-500" />, label: "LLM (Ollama/GPT)" },
       { icon: <SiShieldsdotio className="w-5 h-5 text-purple-500" />, label: "News Authenticity" },
       { icon: <SiFigma className="text-purple-500 w-5 h-5" />, label: "Figma" }
-      
+
     ],
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
-        NewsGuard-AI
+        <Image className="mx-auto border-2 border-cyan-400 rounded-xl"
+          src="/NewsGuardAI.jpg"
+          alt="Picture of the author"
+          width={800}
+          height={800} />
       </div>
     ),
   },
 
   {
-    title: "NewsGuard AI",
+    title: "Unit Converter",
     description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
     features: [
       { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
@@ -55,12 +59,17 @@ const projects = [
     ],
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
-        NewsGuard-AI
+        <Image className="mx-auto border-2 border-cyan-400 rounded-xl"
+          src="/Unit.jpg"
+          alt="Picture of the author"
+          width={200}
+          height={800}
+        />      
       </div>
     ),
   },
-   {
-    title: "NewsGuard AI",
+  {
+    title: "Portfolio",
     description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
     features: [
       { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
@@ -77,39 +86,25 @@ const projects = [
     ],
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
-        NewsGuard-AI
+        <Image className="mx-auto border-2 border-blue-950 rounded-xl"
+          src="/Portfolio.png"
+          alt="Picture of the author"
+          width={800}
+          height={800}
+        />
+
       </div>
     ),
   },
-   {
-    title: "NewsGuard AI",
-    description: "An AI-powered web platform that detects fake news by extracting key phrases, verifying sources via Google Search, and using LLMs for authenticity scoring. Built with Flask, PostgreSQL, and React.",
-    features: [
-      { icon: <GoNorthStar className="w-5 h-5  text-cyan-400" />, label: "Extracts key phrases from news articles using LLMs to identify the core context." },
-      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Uses Google Custom Search API to find real-time references and trusted sources." },
-      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: "Compares the article with external sources using LLMs to generate a truthfulness score." },
-      { icon: <GoNorthStar className="w-5 h-5 text-cyan-400" />, label: " Persists article data, user logs, and historical results using PostgreSQL." },
-    ],
-    tech: [
-      { icon: <SiPython className="text-blue-400 w-5 h-5" />, label: "Python" },
-      { icon: <SiFlask className="w-5 h-5 text-sky-500" />, label: "Flask" },
-      { icon: <SiPostgresql className="w-5 h-5 text-yellow-400" />, label: "PostgreSQL" },
-      { icon: <SiGoogle className="w-5 h-5 text-green-400" />, label: "Google Search API" },
-      { icon: <SiChatbot className="w-5 h-5 text-pink-500" />, label: "LLM (Ollama/GPT)" },
-      { icon: <SiShieldsdotio className="w-5 h-5 text-purple-500" />, label: "News Authenticity" },
-    ],
-    content: (
-      <div className="flex h-full w-full items-center justify-center text-white">
-        NewsGuard-AI
-      </div>
-    ),
-  },
+
+
+
 ];
 
 
 export function ProjectsSection() {
   return (
-    <section id="projects" className="w-full max-w-7xl mx-auto px-8 py-20 min-h-screen overflow-hidden">
+    <section id="projects" className="w-full max-w-8xl mx-auto  py-10 min-h-screen overflow-hidden">
       <div className="text-center mb-5">
 
         <div className=" flex justify-center text-center">
@@ -130,9 +125,9 @@ export function ProjectsSection() {
         </p>
       </div>
 
-      
+
       <div className="w-full py-4">
-        <StickyScroll content={projects} />
+        <StickyScroll content={content} />
       </div>
     </section>
   );
