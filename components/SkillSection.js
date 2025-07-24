@@ -9,7 +9,7 @@ import {
   SiFramer, SiExpress,
   SiDocker, SiPostman,
   SiFigma, SiRedux, SiNodedotjs,
-  SiGithub, SiFastapi, SiHtml5,SiCss3,SiThreedotjs,SiNetlify, SiPythonanywhere, SiAnaconda, SiOllama, SiIntellijidea, SiLinux, SiMysql,SiSqlite,SiSqlalchemy
+  SiGithub, SiFastapi, SiHtml5,SiCss3,SiThreedotjs,SiNetlify, SiPythonanywhere, SiAnaconda, SiOllama, SiIntellijidea, SiLinux, SiMysql,SiSqlite,SiSqlalchemy,SiBootstrap, SiNpm, SiAndroidstudio, SiArduino
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
@@ -17,6 +17,7 @@ import { VscVscode } from "react-icons/vsc";
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
 
 const skillData = [
+
   {
     category: "Languages",
     skills: [
@@ -40,6 +41,7 @@ const skillData = [
       { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400 w-6 h-6" /> },
       { name: "Redux", icon: <SiRedux className="text-purple-500 w-6 h-6" /> },
       { name: "Node.js", icon: <SiNodedotjs className="text-green-600 w-6 h-6" /> },
+      { name: "Npm", icon: <SiNpm className="text-green-600 w-6 h-6" /> },
       { name: "Express.js", icon: <SiExpress className="text-gray-600 w-6 h-6" /> },
       { name: "FastAPI", icon: <SiFastapi className="text-blue-500 w-6 h-6" /> },
       { name: "Three.js", icon: <SiThreedotjs className="text-white w-6 h-6" /> },
@@ -55,7 +57,7 @@ const skillData = [
       { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-6 h-6" /> },
       { name: "Firebase", icon: <SiFirebase className="text-yellow-600 w-6 h-6" /> },
       { name: "Vercel", icon: <SiVercel className="text-white w-6 h-6" /> },
-      {name: "Netlifly", icon: <SiNetlify className="text-red-600 w-6 h-6"/>},
+      {name: "Netlifly", icon: <SiNetlify className="text-cyan-600 w-6 h-6"/>},
       {name: "PythonAnyWhere", icon: <SiPythonanywhere className="text-green-600 w-6 h-6"/>},
       {name: "MySQL", icon: <SiMysql className="text-blue-600 w-6 h-6"/>},
       {name: "SQLite", icon: <SiSqlite className="text-cyan-400 w-6 h-6"/>},
@@ -76,7 +78,10 @@ const skillData = [
       { name: "Anaconda", icon: <SiAnaconda className="text-green-500 w-6 h-6" /> },
       { name: "Ollama", icon: <SiOllama className="text-white-500 w-6 h-6" /> },
       { name: "Visual Studio Code", icon: <VscVscode className="text-blue-500 w-6 h-6" /> },
+      { name: "Android Studio", icon: <SiAndroidstudio className="text-emerald-400 w-6 h-6" /> },
+      { name: "Ardiuno IDEA", icon: <SiArduino className="text-white w-6 h-6" /> },
       { name: "InteliJ IDEA", icon: <SiIntellijidea className="text-blue-700 w-6 h-6" /> },
+      { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 w-6 h-6" /> },
       { name: "Linux", icon: <SiLinux className="text-white-700 w-6 h-6" /> },
 
 
