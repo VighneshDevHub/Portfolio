@@ -47,7 +47,7 @@ export const StickyScroll = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full flex h-[34rem] gap-10 px-10 overflow-y-scroll scrollbar-hide p-5"
+      className="relative w-full flex h-[34rem] gap-10 px-10 overflow-y-scroll scrollbar-hide p-5 "
     >
       {/* Left: Scrollable Cards */}
       <div className="flex flex-col space-y-30 w-4/5 p-5 rounded-xl">
@@ -71,13 +71,13 @@ export const StickyScroll = ({
       </div>
 
       {/* Right: Sticky Info */}
-      <div className="w-1/2 sticky top-8 h-fit space-y-10">
+      <div className="w-5/8 sticky top-8 h-fit space-y-10">
         {content[activeCard] && (
           <div className="space-y-4">
             <motion.h2
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-2xl font-bold text-slate-100"
+              className="text-3xl font-bold text-slate-100"
             >
               {content[activeCard].title}
             </motion.h2>
@@ -92,7 +92,7 @@ export const StickyScroll = ({
 
             {content[activeCard].features && (
               <div className="space-y-2">
-                <p className="text-sm text-slate-400 font-semibold">Features:</p>
+                <p className=" text-slate-400 font-semibold text-base">Features:</p>
                 <ul className="space-y-1">
                   {content[activeCard].features.map((feature, i) => (
                     <li
@@ -109,7 +109,7 @@ export const StickyScroll = ({
 
             {content[activeCard].tech && (
               <div className="space-y-2 mt-4">
-                <p className="text-sm text-slate-400 font-semibold">Tech Stack:</p>
+                <p className=" text-slate-400 font-semibold">Tech Stack:</p>
                 <ul className="flex flex-wrap gap-2 text-xs">
                   {content[activeCard].tech.map((tech, i) => (
                     <li
