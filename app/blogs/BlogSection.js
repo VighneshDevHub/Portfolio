@@ -17,6 +17,7 @@ const blogs = [
     techTags: ["HTML", "CSS", "JavaScript", "+30"]
 
   },
+  
   {
     id: 2,
     title: "Next.js Portfolio Design Guide",
