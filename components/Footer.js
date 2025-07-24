@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import {
-  FaGithub,
-  FaLinkedin,
-  FaRegEnvelope,
-  FaPhoneAlt,
-} from "react-icons/fa";
+
+import {SiX, SiLinkedin, SiGithub, SiMailboxdotorg} from "react-icons/si";
+import { FaHeart,FaRegEnvelope } from "react-icons/fa";
+
 import Link from "next/link";
 
 const Footer = () => {
@@ -32,11 +30,11 @@ const Footer = () => {
               <Link href="/projects">Projects</Link>
             </li>
             <li>
-              <Link href="/blog">Blog</Link>
+              <Link href="/blogs">Blog</Link>
             </li>
             <li>
               <Link href="/resume" target="_blank" rel="noopener noreferrer">
-                Resume ↗
+                Resume 
               </Link>
             </li>
           </ul>
@@ -46,18 +44,20 @@ const Footer = () => {
         <div>
           <h2 className="text-lg font-semibold mb-2">Connect</h2>
           <div className="flex space-x-4 mt-2 text-xl text-white/70">
-            <Link href="https://github.com/yourhandle" target="_blank">
-              <FaGithub />
+            <Link href="https://github.com/VighneshDevHub" target="_blank">
+              <SiGithub />
             </Link>
-            <Link href="https://linkedin.com/in/yourhandle" target="_blank">
-              <FaLinkedin />
+            <Link href="https://linkedin.com/in/vighneshsalunkhe" target="_blank">
+              <SiLinkedin />
             </Link>
-            <Link href="mailto:your@email.com">
-              <FaRegEnvelope />
+            <Link href="https://linkedin.com/in/vighneshsalunkhe" target="_blank">
+              <SiX />
             </Link>
-            <Link href="tel:+919876543210">
-              <FaPhoneAlt />
+            
+            <Link href="mailto:vighneshsalunkhe949@gmail.com"><FaRegEnvelope />
             </Link>
+
+            
           </div>
         </div>
 
@@ -72,12 +72,12 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-xs text-white/50">
+      <div className="mt-10 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center text-sm text-white/50">
         <p>
-          © {new Date().getFullYear()} Vighnesh Salunkhe. All rights reserved.
+          &copy; {new Date().getFullYear()} Vighnesh Salunkhe. All rights reserved.
         </p>
         <p className="mt-2 md:mt-0">
-          Crafted with ❤️ using Next.js & Tailwind CSS
+          Built with ❤ by Vighnesh Salunkhe.
         </p>
       </div>
     </footer>
