@@ -5,31 +5,31 @@ import { InfiniteMovingCards } from './ui/InfiniteMovingCards'
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    role: "CEO, Tech Innovations",
+    name: "Irfan Khan",
+    role: "CEO, Ignitech.in",
     testimonial: "Working with this developer was a game-changer for our project. Their expertise and attention to detail were exceptional.",
-    image: "/testimonial1.jpg"
+    image: "/labtocat.png"
   },
   {
     id: 2,
-    name: "Jane Smith",
-    role: "CTO, Creative Solutions",
-    testimonial: "An outstanding experience! The developer delivered high-quality work on time and exceeded our expectations.",
-    image: "/testimonial2.jpg"
+    name: "Hemanshu Sonar",
+    role: "Hackathon Partner",
+    testimonial: "Professional, skilled, and a pleasure to work with. Highly recommend for any web development needs.",
+    image: "/labtocat.png"
   },
   {
     id: 3,
-    name: "Alice Johnson",
-    role: "Product Manager, Future Tech",
+    name: "Rasika Patil",
+    role: "Client, Computer Science Student",
     testimonial: "Professional, skilled, and a pleasure to work with. Highly recommend for any web development needs.",
-    image: "/testimonial3.jpg"
+    image: "/labtocat.png"
   },
 
   { id: 4,
-    name: "Bob Brown",
-    role: "Founder, Startup Hub",
+    name: "Sakshi Joshi",
+    role: "Student, Goverment Polytechnic Thane",
     testimonial: "Their innovative approach and problem-solving skills made a significant impact on our project. Truly impressed!",
-    image: "/testimonial4.jpg"
+    image: "/labtocat.png"
   },
 
 
@@ -60,6 +60,11 @@ const Testimonials = () => {
       </div>
 
       <div className="h-2/5 mt-10 rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+      <InfiniteMovingCards
+        items={testimonials}
+        direction="left"
+        speed="fast"
+      />
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
