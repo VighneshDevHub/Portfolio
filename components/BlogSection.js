@@ -11,9 +11,11 @@ const blogs = [
     description:
       "How we built an AI model to detect fake news using LLMs and Google Search APIs.",
     date: "July 18, 2025",
-    image: "/blog1.jpg",
+    image: "/coder.jpg",
     slug: "ai-in-newsguard",
     tag: "AI / LLM",
+    techTags:["HTML", "CSS", "JavaScript", "+30"]
+
   },
   {
     id: 2,
@@ -21,9 +23,10 @@ const blogs = [
     description:
       "Tips on building a cosmic-themed portfolio using Tailwind, Next.js, and glassmorphism.",
     date: "July 15, 2025",
-    image: "/blog2.jpg",
+    image: "/labtocat.png",
     slug: "nextjs-portfolio-design",
     tag: "Web Design",
+    techTags:["HTML", "CSS", "JavaScript", "+30"]
   },
   {
     id: 3,
@@ -31,10 +34,13 @@ const blogs = [
     description:
       "We coded a Pine Script strategy for XAUUSD using ICT & market structure logic.",
     date: "July 12, 2025",
-    image: "/blog3.jpg",
+    image: "/car.jpeg",
     slug: "smart-money-strategy",
     tag: "Trading",
+    techTags:["HTML", "CSS", "JavaScript", "+30"]
+
   },
+
 ];
 
 const BlogSection = () => {
@@ -62,10 +68,10 @@ const BlogSection = () => {
         </p>
       </div>
 
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {blogs.map((blog) => (
-          <Link key={blog.id} href={`/blog/${blog.slug}`} className="group">
-            <div className="relative bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_#a78bfa99] transition duration-300 transform hover:-translate-y-1 active:scale-[0.98]">
+          <Link key={blog.id} href={`/blogs/${blog.slug}`} className="group">
+            <div className="relative h-[500px] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_#a78bfa99] transition duration-300 transform hover:-translate-y-1 active:scale-[0.98]">
               <div className="relative w-full aspect-video overflow-hidden">
                 <Image
                   src={blog.image}
@@ -74,9 +80,9 @@ const BlogSection = () => {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <div className="p-5 flex flex-col justify-between h-full">
+              <div className="p-5 flex flex-col  h-full">
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-xs font-medium uppercase tracking-wide text-purple-400 bg-purple-900/30 px-2 py-1 rounded-md">
+                  <span className="text-xs font-semibold uppercase tracking-wide text-black bg-white px-2 py-1 rounded-md">
                     {blog.tag}
                   </span>
                   <p className="text-xs text-gray-400">{blog.date}</p>
@@ -87,9 +93,21 @@ const BlogSection = () => {
                 <p className="text-sm text-gray-400 mt-2 line-clamp-3">
                   {blog.description}
                 </p>
-                <div className="mt-4 text-sm font-medium text-purple-500 group-hover:underline">
-                  <span className="inline-flex items-center gap-1 text-purple-500 group-hover:underline">
-                    Read more <FaArrowRight className="w-4 h-4" />
+
+                <div  className="flex flex-wrap gap-2 pt-5   text-gray-300">
+                  {blog.techTags.map((tag,index) =>(
+                    
+                    <span
+                      key={index}
+                      className="text-sm flex flex-wrap rounded-full border border-gray-600 py-0.5 px-2" 
+                      >
+                        {tag}
+                      </span>
+                  ))}
+                </div>
+                <div className="mt-4  text-sm font-medium  bg-white text-center rounded-2xl p-2">
+                  <span className="gap-1 text-black ">
+                    Read More 
                   </span>
                 </div>
               </div>
