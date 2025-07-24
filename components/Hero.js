@@ -10,7 +10,6 @@ import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <div>
             <section className="relative flex flex-col items-center justify-center text-center min-h-[100vh] px-4 bg-black text-white overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0c0c1e] to-black z-0">
                 </div>
@@ -48,7 +47,7 @@ const Hero = () => {
 
                     <div className='text-left ml-55'>
                         <span className=' text-gray-400 text-xl mx-2 '>I'm a Professional</span>
-                        <span className='text-blue-900 font-semibold text-3xl'>
+                        <span className='text-purple-500 font-semibold text-3xl'>
                             <FlipWords words={["Full Stack Developer!", "AI/ML Enthusiast!", "UI/UX Designer!", "Mobile App Developer!", "Freelancer!"]} />
                         </span>
                     </div>
@@ -69,7 +68,6 @@ const Hero = () => {
                     </div>
                 </div>
             </section>
-        </div>
     )
 }
 
