@@ -44,7 +44,7 @@ const content = [
       <div className="flex flex-col h-full w-full items-center justify-center text-white">
         <h1 className="text-xl font-bold">NewsGuard AI</h1>
         <Image className="mx-auto border-2 border-cyan-400 rounded-xl"
-          src="/NewsGuardAI.jpg"
+          src="/images/NewsGuardAI.jpg"
           alt="Picture of the author"
           width={800}
           height={800} />
@@ -73,7 +73,7 @@ const content = [
         <h1 className="text-xl font-bold">Unit Converter</h1>
 
         <Image className="mx-auto border-2 border-cyan-400 rounded-xl"
-          src="/Unit.jpg"
+          src="/images/Unit.jpg"
           alt="Picture of the author"
           width={200}
           height={800}
