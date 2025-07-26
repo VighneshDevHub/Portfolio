@@ -1,15 +1,22 @@
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import { Outfit } from 'next/font/google'
 
 export const metadata = {
-  title: "Vighnesh | Portfolio",
+  title: "Vighnesh Salunkhe - Portfolio",
   description: "Full Stack Developer Portfolio",
 }
 
+const outfit = Outfit ({
+  subsets: ['latin'],
+  weight: ['300','400','500', '600', '700'],
+  display:'swap'
+})
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={outfit.className}>
       <body className="relative min-h-screen w-full bg-[#0a1026] text-white">
         {/* Background Gradient */}
         <div className="pointer-events-none fixed inset-0 z-0">
