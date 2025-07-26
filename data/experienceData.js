@@ -13,7 +13,11 @@ export const experienceData = [
       "Visualized KPIs using Tableau and PowerBI",
       "Collaborated cross-functionally with product and marketing teams",
     ],
-    images: ["/images/Batman.png", "/images/coder.jpg", "/images/labtocat.png"],
+    images: [
+      "/images/Batman.png", "/images/coder.jpg", "/images/labtocat.png", "/images/Batman.png", "/images/coder.jpg", "/images/labtocat.png"
+
+    
+    ],
   },
   {
     id: 1.2,
