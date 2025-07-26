@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import Link from "next/link";
 
 export const StickyScroll = ({
   content,
@@ -123,6 +124,30 @@ export const StickyScroll = ({
                 </ul>
               </div>
             )}
+
+
+            <div className="flex gap-3">
+              {content[activeCard].slug && (
+                <Link
+                  href={`/projects/${content[activeCard].slug}`}
+                  className="px-4 py-2 text-sm rounded-md font-semibold bg-indigo-600 text-white hover:bg-indigo-700 transition"
+                >
+                  View Details
+                </Link>
+              )}
+
+              {content[activeCard].liveDemo && (
+                <a
+                  href={content[activeCard].liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 text-sm rounded-md font-semibold bg-blue-600 text-white hover:bg-blue-700 transition"
+                >
+                  Live Demo
+                </a>
+              )}
+            </div>
+
           </div>
         )}
       </div>

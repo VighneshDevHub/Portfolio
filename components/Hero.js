@@ -19,7 +19,7 @@ const Hero = () => {
                 <div className="relative z-10 max-w-4xl mx-auto pt-20">
 
 
-                    <div className=" flex justify-center text-center">
+                    <div className=" flex justify-center text-center mb-10">
                         <HoverBorderGradient
                             containerClassName="rounded-full"
                             as="button"
@@ -34,8 +34,8 @@ const Hero = () => {
                     </div>
 
 
-                    <div className="w-full text-gray-400 mt-4">
-                        <span className='text-xl'>Hello, I'm</span> <span className="text-white text-3xl font-semibold">Vighnesh Salunkhe,</span> <br />
+                    <div className="w-full text-gray-400 mt-4 mb-1">
+                        <span className='text-xl font-outfit'>Hello, I'm</span> <span className="text-white text-3xl font-semibold">Vighnesh Salunkhe,</span> <br />
                     </div>
 
                     <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 leading-tight">
@@ -45,12 +45,7 @@ const Hero = () => {
                         </span>
                     </h1>
 
-                    <div className='text-left ml-55'>
-                        <span className=' text-gray-400 text-xl mx-2 '>I'm a Professional</span>
-                        <span className='text-purple-500 font-semibold text-3xl'>
-                            <FlipWords words={["Full Stack Developer!", "AI/ML Enthusiast!", "UI/UX Designer!", "Mobile App Developer!", "Freelancer!"]} />
-                        </span>
-                    </div>
+                    
 
                     <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
                         <a

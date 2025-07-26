@@ -1,7 +1,7 @@
 "use client";;
 import { Box, Code, HeartHandshake, Globe, Sparkles } from "lucide-react";
 import { GlowingEffect } from "./ui/GlowingEffect";
-import { SiNextdotjs, SiReact, SiTypescript, SiJavascript,SiRedux ,SiNodedotjs,SiPython, SiTailwindcss, SiMongodb, SiFramer, SiGit,SiGithub } from "react-icons/si";
+import { SiNextdotjs, SiReact, SiTypescript, SiJavascript,SiRedux ,SiNodedotjs,SiPython, SiTailwindcss, SiMongodb, SiFramer, SiGit,SiGithub, SiExpress } from "react-icons/si";
 
 const techStackIcons = [
   { icon: <SiNextdotjs className="text-white text-2xl" />, label: "Next.js" },
@@ -9,11 +9,11 @@ const techStackIcons = [
   { icon: <SiTypescript className="text-blue-500 text-2xl" />, label: "TypeScript" },
   { icon: <SiNodedotjs className="text-green-600 text-2xl" />, label: "Node.js" },
   { icon: <SiJavascript className="text-yellow-300 text-2xl" />, label: "JavaScript" },
+  { icon: <SiExpress className="text-white text-2xl" />, label: "Express" },
   { icon: <SiRedux className="text-purple-500 text-2xl" />, label: "Redux" },
   { icon: <SiPython className="text-yellow-400 text-2xl" />, label: "Python" },
   { icon: <SiTailwindcss className="text-sky-400 text-2xl" />, label: "Tailwind CSS" },
   { icon: <SiMongodb className="text-green-500 text-2xl" />, label: "MongoDB" },
-  { icon: <SiFramer className="text-white text-2xl" />, label: "Framer" },
   { icon: <SiGit className="text-orange-500 text-2xl" />, label: "Git" },
   { icon: <SiGithub className="text-white text-2xl" />, label: "GitHub" },
 
