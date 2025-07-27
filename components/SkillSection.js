@@ -72,7 +72,6 @@ const skillData = [
     skills: [
       { name: "Git", icon: <SiGit className="text-orange-500 w-6 h-6" /> },
       { name: "GitHub", icon: <SiGithub className="text-white w-6 h-6" /> },
-      { name: "Docker", icon: <SiDocker className="text-blue-500 w-6 h-6" /> },
       { name: "Postman", icon: <SiPostman className="text-orange-500 w-6 h-6" /> },
       { name: "Figma", icon: <SiFigma className="text-purple-500 w-6 h-6" /> },
       { name: "Anaconda", icon: <SiAnaconda className="text-green-500 w-6 h-6" /> },
@@ -82,7 +81,7 @@ const skillData = [
       { name: "Ardiuno IDEA", icon: <SiArduino className="text-white w-6 h-6" /> },
       { name: "InteliJ IDEA", icon: <SiIntellijidea className="text-blue-700 w-6 h-6" /> },
       { name: "Bootstrap", icon: <SiBootstrap className="text-purple-500 w-6 h-6" /> },
-      { name: "Linux", icon: <SiLinux className="text-white-700 w-6 h-6" /> },
+      { name: "Linux", icon: <SiLinux className="text-yellow-200 w-6 h-6" /> },
 
 
 
