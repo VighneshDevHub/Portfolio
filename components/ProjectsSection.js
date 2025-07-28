@@ -22,6 +22,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiFramer,
+  SiShadcnui,
 } from "react-icons/si";
 import { GoNorthStar } from "react-icons/go";
 import { HoverBorderGradient } from "./ui/HoverBorderGradient";
@@ -89,13 +90,14 @@ const content = [
     ],
     content: (
       <div className="flex flex-col h-full w-full items-center justify-center text-white">
-        <h1 className="text-xl font-bold">NewsGuard AI</h1>
+        <h1 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">NewsGuard AI</h1>
         <Image
-          className="mx-auto border-2 border-cyan-400 rounded-xl"
+          className="mx-auto border-2 border-cyan-400 rounded-xl w-full max-w-[800px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-cover"
           src="/images/NewsGuardAI.jpg"
-          alt="Picture of the author"
+          alt="NewsGuard AI Project"
           width={800}
           height={800}
+          priority
         />
       </div>
     ),
@@ -151,14 +153,14 @@ const content = [
     ],
     content: (
       <div className="flex flex-col h-full w-full items-center justify-center text-white">
-        <h1 className="text-xl font-bold">Unit Converter</h1>
-
+        <h1 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Unit Converter</h1>
         <Image
-          className="mx-auto border-2 border-cyan-400 rounded-xl"
-          src="/images/Unit.jpg"
-          alt="Picture of the author"
-          width={200}
-          height={800}
+          className="mx-auto border-2 border-cyan-400 rounded-xl w-full max-w-[800px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-cover"
+          src="/images/NewsGuardAI.jpg"
+          alt="Unit Converter Project"
+          width={800}
+          height={500}
+          priority
         />
       </div>
     ),
@@ -204,20 +206,21 @@ const content = [
         icon: <SiNodedotjs className="text-green-600 w-6 h-6" />,
         label: "Node.js",
       },
-      { icon: <SiFigma className="text-purple-500 w-5 h-5" />, label: "Figma" },
+      { icon: <SiShadcnui className="text-white w-5 h-5" />, label: "Shadcn UI" },
       { icon: <SiFramer className="text-white text-2xl" />, label: "Framer" },
 
       { icon: <SiVercel className="text-white w-6 h-6" />, label: "Vercel" },
     ],
     content: (
       <div className="flex flex-col h-full w-full items-center justify-center text-white">
-        <h1 className="text-xl font-bold">My Portfolio</h1>
+        <h1 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">My Portfolio</h1>
         <Image
-          className="mx-auto border-2 border-blue-950 rounded-xl"
+          className="mx-auto border-2 border-cyan-400 rounded-xl w-full max-w-[800px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-cover"
           src="/Portfolio.png"
-          alt="Picture of the author"
+          alt="Portfolio Project"
           width={800}
           height={800}
+          priority
         />
       </div>
     ),
@@ -228,28 +231,28 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="w-full max-w-8xl mx-auto  py-10 min-h-screen overflow-hidden"
+      className="w-full max-w-8xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-16 min-h-screen overflow-hidden"
     >
-      <div className="text-center mb-5">
-        <div className=" flex justify-center text-center">
+      <div className="text-center mb-6 sm:mb-8 md:mb-10">
+        <div className="flex justify-center text-center mb-3 sm:mb-4">
           <HoverBorderGradient
             containerClassName="rounded-full"
             as="button"
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <span className="text-white text-sm font-semibold">My Work</span>
+            <span className="text-white text-xs sm:text-sm font-semibold px-3 py-1">My Work</span>
           </HoverBorderGradient>
         </div>
 
-        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          Featured <span className="text-purple-500">Projetcs</span>
+        <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight px-2">
+          Featured <span className="text-purple-500">Projects</span>
         </h3>
-        <p className="text-gray-400 text-lg mt-2">
+        <p className="text-gray-400 text-sm sm:text-base md:text-lg mt-2 max-w-2xl mx-auto">
           Explore tech, design, and strategies behind modern builds
         </p>
       </div>
 
-      <div className="w-full py-4">
+      <div className="w-full py-2 sm:py-4">
         <StickyScroll content={content} />
       </div>
     </section>

@@ -57,13 +57,13 @@ export function HoverBorderGradient({
       )}
       {...props}>
       <div
-        className={twMerge("w-auto text-white z-10 bg-black px-4 py-0.5  rounded-[inherit]", className)}>
+        className={twMerge("w-auto text-white z-10 bg-black px-3 md:px-4 py-0.5 text-xs md:text-sm rounded-[inherit]", className)}>
         {children}
       </div>
       <motion.div
         className={twMerge("flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]")}
         style={{
-          filter: "blur(2px)",
+          filter: "blur(1.5px)",
           position: "absolute",
           width: "100%",
           height: "100%",

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
       <body className="relative min-h-screen w-full bg-[#0a1026] text-white">
         {/* Background Gradient */}
         <div className="pointer-events-none fixed inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0c0c1e] to-black z-0" />
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-[#0b0b1f] to-black z-0" />
         </div>
 
         {/* Main layout container with z-10 */}

@@ -9,12 +9,12 @@ export const projects = [
             "NewsGuard AI is a powerful tool that verifies the authenticity of news articles using LLMs. It extracts key phrases, searches trusted sources, and compares content to generate an authenticity score. The platform is built with a Flask backend and a Flutter frontend, integrating OpenAI/Ollama for semantic matching and Google Custom Search API for factual verification.",
 
         projectType: "Full Stack Web App",
-        role: "Frontend + Backend Developer",
-        duration: "Feb 2024 – May 2024",
+        role: "Full Stack Developer",
+        duration: "Feb 2025 - May 2025",
         status: "Completed",
         coverImage: "/images/NewsGuardAI.jpg",
         problemStatement: "With the surge in fake news, there’s a need for an automated solution to verify the authenticity of articles in real-time.",
-        techStack: ["Next.js", "Flask", "PostgreSQL", "TailwindCSS", "Ollama", "Google Search API"],
+        techStack: ["HTML","CSS", "JavaScript","Flask", "PostgreSQL", "Ollama","Google Search API"],
         features: [
             "Key phrase extraction using LLM",
             "Trusted source comparison via Google Custom Search",
@@ -30,8 +30,7 @@ export const projects = [
         github: "https://github.com/yourgithub/newsguard-ai",
         liveDemo: "https://newsguard-ai.vercel.app",
         imageUrls: [
-            "/images/NewsGuardAi.jpg",
-            "/images/NewsGuardAi.jpg"
+            "/images/NewsGuardAI/home.png",
         ]
     }
     ,

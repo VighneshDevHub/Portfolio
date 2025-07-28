@@ -23,13 +23,8 @@ const AboutMe = () => {
               <span className="text-white text-sm font-semibold">About Me</span>
             </HoverBorderGradient>
           </div>
+          
           <p className="text-gray-300 text-base leading-relaxed">
-            I'm a Full Stack Developer with a passion for building clean, performant,
-            and user-focused digital experiences. From crafting fluid frontends
-            with React and Tailwind to developing secure backend systems using
-            Node.js and Flask—my work is driven by purpose and precision.
-          </p>
-          <p className="text-gray-400 text-sm leading-relaxed">
             I'm Vighnesh Salunkhe, a proactive full-stack developer passionate about creating dynamic web experiences. From frontend to backend, I thrive on solving complex problems with clean, efficient code. My expertise spans React, Next.js, and Node.js, and I'm always eager to learn more.
 
             When I'm not immersed in work, I'm exploring new ideas and staying curious. Life's about balance, and I love embracing every part of it.

@@ -1,6 +1,10 @@
 "use client";;
 import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
+import { TimerIcon } from "lucide-react";
+import { Calendar } from "lucide-react";
+import { CheckCircle } from "lucide-react";
+
 
 export const Timeline = ({
   data
@@ -26,11 +30,11 @@ export const Timeline = ({
 
   return (
     <div
-      className="w-full bg-whitefont-sans md:px-10 flex flex-col "
+      className="w-full bg-whitefont-sans px-4 md:px-10 flex flex-col"
       ref={containerRef}>
-      <div className="max-w-9xl py-5 md:px-8 lg:px-10   ">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-5xl">
-          Changelog from my journey
+      <div className="max-w-9xl py-5 md:px-8 lg:px-10">
+        <h2 className="text-2xl md:text-4xl mb-4 text-black dark:text-white max-w-5xl">
+          Changelog from my journey 
         </h2>
         <p
           className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
@@ -38,46 +42,46 @@ export const Timeline = ({
           a timeline of my journey.
         </p>
       </div>
-      <div ref={ref} className="relative max-w-8xl mx-30 pb-20">
+      <div ref={ref} className="relative max-w-8xl mx-auto pb-20">
         {data.map((item) => (
 
-          <div key={item.id} className="flex justify-start md:pt-40 md:gap-30  " >
+          <div key={item.id} className="flex justify-start pt-16 md:pt-40 gap-2 md:gap-30" >
 
             <div
-              className="sticky flex flex-col md:flex-row z-40 items-center top-40 self-start max-w-xs lg:max-w-sm md:w-full">
+              className="sticky flex flex-col md:flex-row z-40 items-center top-20 md:top-40 self-start max-w-xs lg:max-w-sm md:w-full">
               <div
-                className="h-10 absolute left-3 md:left-3 w-10 rounded-full bg-white dark:bg-black flex items-center justify-center">
+                className="h-8 md:h-10 absolute left-1 md:left-3 w-8 md:w-10 rounded-full bg-white dark:bg-black flex items-center justify-center z-10">
                 <div
-                  className="h-4 w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
+                  className="h-3 w-3 md:h-4 md:w-4 rounded-full bg-neutral-200 dark:bg-neutral-800 border border-neutral-300 dark:border-neutral-700 p-2" />
               </div>
               <h3
-                className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500 ">
+                className="hidden md:block text-xl md:pl-20 md:text-3xl font-bold text-neutral-500 dark:text-neutral-500">
                 {item.date}
               </h3>
             </div>
 
-            <div className="relative pl-20 pr-4 md:pl-4 w-full">
+            <div className="relative pl-12 md:pl-20 pr-2 md:pr-4 w-full">
               
               
-              <h3 className="text-2xl font-semibold text-white">
+              <h3 className="text-xl md:text-2xl font-semibold text-white">
                 {item.role}
               </h3>
-              <p className="text-sm text-purple-300 mb-1">{item.company} • {item.date}</p>
+              <p className="flex text-xs md:text-sm text-purple-300 mb-1 ">{item.company} <span className="flex ml-3 gap-1"> <Calendar className="w-4 h-4"/> {item.date}</span></p>
               {item.location && (
                 <p className="text-xs text-neutral-400 mb-2 italic">{item.location}</p>
               )}
 
-              <p className="text-sm text-gray-300 mb-2">{item.summary}</p>
+              <p className="text-xs md:text-sm text-gray-300 mb-4 w-xl">{item.summary}</p>
 
               {item.achievements?.length > 0 && (
-                <ul className="list-disc list-inside text-sm text-white space-y-1 mb-4">
+                <ul className=" list-inside text-xs md:text-sm text-white space-y-1 mb-4">
                   {item.achievements.map((point, idx) => (
-                    <li key={idx}>{point}</li>
+                     <li key={idx} className="break-words"><span className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-400"/>{point}</span></li>
                   ))}
                 </ul>
               )}
               {item.images && item.images.length > 0 && (
-                <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
+                <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                   {item.images.map((img, index) => (
                     <img
                       key={index}
@@ -98,13 +102,13 @@ export const Timeline = ({
           style={{
             height: height + "px",
           }}
-          className="absolute md:left-8 left-8 top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%]  [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] ">
+          className="absolute left-[18px] md:left-[28px] top-0 overflow-hidden w-[2px] bg-[linear-gradient(to_bottom,var(--tw-gradient-stops))] from-transparent from-[0%] via-neutral-200 dark:via-neutral-700 to-transparent to-[99%] [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)] ">
           <motion.div
             style={{
               height: heightTransform,
               opacity: opacityTransform,
             }}
-            className="absolute inset-x-0 top-0  w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full" />
+            className="absolute inset-x-0 top-0 w-[2px] bg-gradient-to-t from-purple-500 via-blue-500 to-transparent from-[0%] via-[10%] rounded-full" />
         </div>
       </div>
     </div>

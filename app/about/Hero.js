@@ -22,7 +22,8 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-400 max-w-2xl text-center mt-4">
-                    Uncover my journey, mindset, and the mission that drives me to build impactful digital experiences.                </p>
+                    Uncover my journey, mindset, and the mission that drives me to build impactful digital experiences.
+                </p>
 
             </div>
         </section>

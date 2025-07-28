@@ -1,7 +1,7 @@
 import { projects } from "@/data/projectData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Github, ExternalLink, CheckCircle, Award } from "lucide-react";
+import { Github, ExternalLink, CheckCircle, Award} from "lucide-react";
 import React from "react";
 
 const ProjectDetailPage = async ({ params }) => {
@@ -75,7 +75,7 @@ const ProjectDetailPage = async ({ params }) => {
                 {/* Screenshots */}
                 <div className="mb-10">
                     <h2 className="text-3xl font-semibold mb-6">🖼️ Screenshots</h2>
-                    <div className="grid md:grid-cols-2 gap-6">
+                    <div className="grid md:grid-cols-2 gap-6 ">
                         {project.imageUrls?.map((imgUrl, idx) => (
                             <div key={idx} className="rounded-xl overflow-hidden shadow-lg border border-gray-700">
                                 <Image
