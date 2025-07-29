@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 import { HoverBorderGradient } from "@/components/ui/HoverBorderGradient";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Blog {
   id: number;
@@ -28,7 +29,7 @@ const blogs: Blog[] = [
     techTags: ["HTML", "CSS", "JavaScript", "+30"]
 
   },
-  
+
   {
     id: 2,
     title: "Next.js Portfolio Design Guide",
@@ -111,14 +112,17 @@ const BlogSection: React.FC = () => {
         </div>
 
         <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          Latest <span className="text-purple-500">Blogs</span>
+          Coming <span className="text-purple-500">Soon..</span>
         </h3>
         <p className="text-gray-400 text-lg mt-2">
-          Explore tech, design, and strategies behind modern builds
+          I am writing some interesting blogs & articles.Stay Tuned!
         </p>
       </div>
 
-      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
+
+
+      {/* My Blog templates */}
+      {/* <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {blogs.map((blog) => (
           <Link key={blog.id} href={`/blogs/${blog.slug}`} className="group">
             <div className="relative h-[500px] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_#a78bfa99] transition duration-300 transform hover:-translate-y-1 active:scale-[0.98]">
@@ -164,9 +168,65 @@ const BlogSection: React.FC = () => {
             </div>
           </Link>
         ))}
+      </div> */}
+
+      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 place-items-center">
+
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+
+        <div className="flex flex-col space-y-3">
+          <Skeleton className="h-[125px] w-[250px] rounded-xl" />
+          <div className="space-y-2">
+            <Skeleton className="h-4 w-[250px]" />
+            <Skeleton className="h-4 w-[200px]" />
+          </div>
+        </div>
+        
+
+
       </div>
 
-      
+
+
+
 
 
     </section>
