@@ -26,6 +26,8 @@ body {
 }
 
 
+
+
 /* Hide scrollbar for WebKit (Chrome, Safari) */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;

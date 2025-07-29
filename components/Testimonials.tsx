@@ -16,28 +16,28 @@ const testimonials: Testimonial[] = [
     name: "Irfan Khan",
     role: "CEO, Ignitech.in",
     testimonial: "Working with this developer was a game-changer for our project. Their expertise and attention to detail were exceptional.",
-    image: "/labtocat.png"
+    image: "/Images/labtocat.png"
   },
   {
     id: 2,
     name: "Hemanshu Sonar",
     role: "Hackathon Partner",
     testimonial: "Professional, skilled, and a pleasure to work with. Highly recommend for any web development needs.",
-    image: "/labtocat.png"
+    image: "/Images/labtocat.png"
   },
   {
     id: 3,
     name: "Rasika Patil",
     role: "Client, Computer Science Student",
     testimonial: "Professional, skilled, and a pleasure to work with. Highly recommend for any web development needs.",
-    image: "/labtocat.png"
+    image: "/Images/labtocat.png"
   },
 
   { id: 4,
     name: "Sakshi Joshi",
     role: "Student, Goverment Polytechnic Thane",
     testimonial: "Their innovative approach and problem-solving skills made a significant impact on our project. Truly impressed!",
-    image: "/labtocat.png"
+    image: "/Images/labtocat.png"
   },
 
 

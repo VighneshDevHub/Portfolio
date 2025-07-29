@@ -22,7 +22,7 @@ const blogs: Blog[] = [
     description:
       "How we built an AI model to detect fake news using LLMs and Google Search APIs.",
     date: "July 18, 2025",
-    image: "/coder.jpg",
+    image: "/Images/coder.jpg",
     slug: "ai-in-newsguard",
     tag: "AI / LLM",
     techTags: ["HTML", "CSS", "JavaScript", "+30"]
@@ -33,7 +33,7 @@ const blogs: Blog[] = [
     description:
       "Tips on building a cosmic-themed portfolio using Tailwind, Next.js, and glassmorphism.",
     date: "July 15, 2025",
-    image: "/labtocat.png",
+    image: "/Images/labtocat.png",
     slug: "nextjs-portfolio-design",
     tag: "Web Design",
     techTags: ["HTML", "CSS", "JavaScript", "+30"]
@@ -44,7 +44,7 @@ const blogs: Blog[] = [
     description:
       "We coded a Pine Script strategy for XAUUSD using ICT & market structure logic.",
     date: "July 12, 2025",
-    image: "/car.jpeg",
+    image: "/Images/car.jpeg",
     slug: "smart-money-strategy",
     tag: "Trading",
     techTags: ["HTML", "CSS", "JavaScript", "+30"]

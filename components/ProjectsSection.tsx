@@ -113,7 +113,7 @@ const content: ContentItem[] = [
         <h1 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">NewsGuard AI</h1>
         <Image
           className="mx-auto border-2 border-cyan-400 rounded-xl w-full max-w-[800px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-cover"
-          src="/images/NewsGuardAI.jpg"
+          src="/images/NewsGuardAI/NewsGuardAI.jpg"
           alt="NewsGuard AI Project"
           width={800}
           height={800}
@@ -176,7 +176,7 @@ const content: ContentItem[] = [
         <h1 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Unit Converter</h1>
         <Image
           className="mx-auto border-2 border-cyan-400 rounded-xl w-full max-w-[800px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-cover"
-          src="/images/NewsGuardAI.jpg"
+          src="/images/NewsGuardAI/NewsGuardAI.jpg"
           alt="Unit Converter Project"
           width={800}
           height={500}
@@ -236,7 +236,7 @@ const content: ContentItem[] = [
         <h1 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">My Portfolio</h1>
         <Image
           className="mx-auto border-2 border-cyan-400 rounded-xl w-full max-w-[800px] sm:max-w-[400px] md:max-w-[600px] lg:max-w-[800px] h-auto object-cover"
-          src="/Portfolio.png"
+          src="/images/NewsGuardAI/NewsGuardAI.jpg"
           alt="Portfolio Project"
           width={800}
           height={800}
