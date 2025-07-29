@@ -1,5 +1,4 @@
 import React from 'react';
-import { GlobeDemo } from './GlobeDemo';
 
 const ContactSection: React.FC = () => {
   return (

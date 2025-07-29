@@ -76,9 +76,11 @@ const BlogSection: React.FC = () => {
         </p>
       </div>
 
+      {/* For Dynamic blog route */}
+      {/* <Link key={blog.id} href={`/blogs/${blog.slug}`} className="group"> */}
       <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
         {blogs.map((blog) => (
-          <Link key={blog.id} href={`/blogs/${blog.slug}`} className="group">
+          <Link key={blog.id} href='/blogs' className="group">
             <div className="relative h-[500px] bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl overflow-hidden shadow-lg hover:shadow-[0_0_30px_#a78bfa99] transition duration-300 transform hover:-translate-y-1 active:scale-[0.98]">
               <div className="relative w-full aspect-video overflow-hidden">
                 <Image

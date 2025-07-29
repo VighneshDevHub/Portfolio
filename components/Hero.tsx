@@ -49,9 +49,9 @@ const Hero: React.FC = () => {
                 <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-20 sm:mb-30">
                     <a
                         href="#contact"
-                        className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-200 transition-all"
+                        className="flex px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-200 transition-all"
                     >
-                        Let's Connect →
+                        Let's Connect <ArrowRight/>
                     </a>
                     <a
                         href="mailto:vighneshsalunkhe949@gmail.com"
