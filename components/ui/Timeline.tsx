@@ -54,7 +54,7 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
         </p>
       </div>
       <div ref={ref} className="relative max-w-8xl mx-auto pb-20">
-        {data.map((item) => (
+        {data.map((item: TimelineItem) => (
 
           <div key={item.id} className="flex justify-start pt-16 md:pt-40 gap-2 md:gap-30" >
 
@@ -84,13 +84,13 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
 
               <p className="text-xs md:text-sm text-gray-300 mb-4 w-xl">{item.summary}</p>
 
-              {item.achievements?.length > 0 && (
+              {item.achievements?.length ? (
                 <ul className=" list-inside text-xs md:text-sm text-white space-y-1 mb-4">
                   {item.achievements.map((point, idx) => (
                      <li key={idx} className="break-words"><span className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-400"/>{point}</span></li>
                   ))}
                 </ul>
-              )}
+              ): null}
               {item.images && item.images.length > 0 && (
                 <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
                   {item.images.map((img, index) => (
