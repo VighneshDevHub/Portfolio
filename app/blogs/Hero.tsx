@@ -15,7 +15,7 @@ const Hero: React.FC = () => {
                 </h1>
 
                 <p className="text-lg md:text-xl text-gray-400 max-w-2xl text-center mt-4">
-                    Uncover my journey, mindset, and the mission that drives me to build impactful digital experiences.
+          Sharing thoughts on technology, development, AI trends, and lessons from <br />real-world projects.
                 </p>
 
             </div>

@@ -267,8 +267,9 @@ export function ProjectsSection(): React.ReactElement {
         <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold leading-tight px-2">
           Featured <span className="text-purple-500">Projects</span>
         </h3>
-        <p className="text-gray-400 text-sm sm:text-base md:text-lg mt-2 max-w-2xl mx-auto">
-          Explore tech, design, and strategies behind modern builds
+        <p className="text-gray-400 text-lg sm:text-base md:text-lg mt-1 max-w-2xl mx-auto">
+          A showcase of web and AI-driven projects where creativity meets clean architecture and execution.
+
         </p>
       </div>
 

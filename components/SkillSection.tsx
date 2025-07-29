@@ -9,7 +9,7 @@ import {
   SiFramer, SiExpress,
   SiDocker, SiPostman,
   SiFigma, SiRedux, SiNodedotjs,
-  SiGithub, SiFastapi, SiHtml5,SiCss3,SiThreedotjs,SiNetlify, SiPythonanywhere, SiAnaconda, SiOllama, SiIntellijidea, SiLinux, SiMysql,SiSqlite,SiSqlalchemy,SiBootstrap, SiNpm, SiAndroidstudio, SiArduino
+  SiGithub, SiFastapi, SiHtml5, SiCss3, SiThreedotjs, SiNetlify, SiPythonanywhere, SiAnaconda, SiOllama, SiIntellijidea, SiLinux, SiMysql, SiSqlite, SiSqlalchemy, SiBootstrap, SiNpm, SiAndroidstudio, SiArduino
 } from "react-icons/si";
 
 import { FaJava } from "react-icons/fa";
@@ -56,7 +56,7 @@ const skillData: SkillCategory[] = [
       { name: "SqlAlchemy", icon: <SiSqlalchemy className="text-blue-500 w-5 h-5 sm:w-6 sm:h-6" /> },
     ],
   },
- 
+
   {
     category: "Database/Cloud",
     skills: [
@@ -64,15 +64,15 @@ const skillData: SkillCategory[] = [
       { name: "MongoDB", icon: <SiMongodb className="text-green-500 w-5 h-5 sm:w-6 sm:h-6" /> },
       { name: "Firebase", icon: <SiFirebase className="text-yellow-600 w-5 h-5 sm:w-6 sm:h-6" /> },
       { name: "Vercel", icon: <SiVercel className="text-white w-5 h-5 sm:w-6 sm:h-6" /> },
-      {name: "Netlifly", icon: <SiNetlify className="text-cyan-600 w-5 h-5 sm:w-6 sm:h-6"/>},
-      {name: "PythonAnyWhere", icon: <SiPythonanywhere className="text-green-600 w-5 h-5 sm:w-6 sm:h-6"/>},
-      {name: "MySQL", icon: <SiMysql className="text-blue-600 w-5 h-5 sm:w-6 sm:h-6"/>},
-      {name: "SQLite", icon: <SiSqlite className="text-cyan-400 w-5 h-5 sm:w-6 sm:h-6"/>},
+      { name: "Netlifly", icon: <SiNetlify className="text-cyan-600 w-5 h-5 sm:w-6 sm:h-6" /> },
+      { name: "PythonAnyWhere", icon: <SiPythonanywhere className="text-green-600 w-5 h-5 sm:w-6 sm:h-6" /> },
+      { name: "MySQL", icon: <SiMysql className="text-blue-600 w-5 h-5 sm:w-6 sm:h-6" /> },
+      { name: "SQLite", icon: <SiSqlite className="text-cyan-400 w-5 h-5 sm:w-6 sm:h-6" /> },
     ],
   },
-  
 
-   {
+
+  {
     category: "Tools",
     skills: [
       { name: "Git", icon: <SiGit className="text-orange-500 w-5 h-5 sm:w-6 sm:h-6" /> },
@@ -108,13 +108,14 @@ export function SkillSection() {
           >
             <span className="text-white text-xs sm:text-sm font-semibold">My Skills</span>
           </HoverBorderGradient>
-        </div>   
+        </div>
 
         <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-4 sm:mt-6">
           My Secret <span className="text-purple-500">Sauce</span>
         </h3>
-        <p className="text-gray-400 text-base sm:text-lg mt-2 sm:mt-3 px-2">
-          Explore tech, design, and strategies behind modern builds
+        <p className="text-gray-400 text-base sm:text-lg mt-1 sm:mt-3 px-2 max-w-2xl mx-auto">
+          Tools, technologies, and frameworks I use to build intelligent, scalable, and performant digital systems.
+
         </p>
       </div>
 

@@ -6,6 +6,7 @@ import { HoverBorderGradient } from './ui/HoverBorderGradient';
 import { ArrowRight } from 'lucide-react';
 import { MoveRight } from 'lucide-react';
 import { ChevronRight } from 'lucide-react'
+import { AuroraText } from './magicui/aurora-text';
 
 const Hero: React.FC = () => {
     return (
@@ -18,7 +19,7 @@ const Hero: React.FC = () => {
             <div className="relative z-10 max-w-4xl mt-10 sm:mt-16 md:mt-20 pt-10 sm:pt-16 md:pt-20">
 
 
-                <div className="flex justify-center text-center mb-6 sm:mb-8 md:mb-10">
+                <div className="flex justify-center items-center text-center mb-6 sm:mb-8 md:mb-10">
                     <HoverBorderGradient
                         containerClassName="rounded-full"
                         as="button"
@@ -33,25 +34,28 @@ const Hero: React.FC = () => {
                 </div>
 
 
-                <div className="w-full text-gray-400 mt-3 sm:mt-4 mb-1">
-                    <span className='text-lg sm:text-xl font-outfit'>Hello, I'm</span> <span className="text-white text-2xl sm:text-3xl font-semibold">Vighnesh Salunkhe,</span> <br />
-                </div>
+                    {/* <span className="text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl">
+      Ship <AuroraText>beautiful</AuroraText>
+    </span> */}
 
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-3 sm:mb-4 leading-tight">
-                    I help founders turn ideas <br />
-                    <span className="text-gray-300 italic font-light">
-                        into seamless digital experiences
-                    </span>
+
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-4 sm:mb-4 leading-tight">
+                    Hi, I’m Vighnesh Salunkhe. <br/><span className='font-semibold'>  I Build Intelligent Digital Experiences</span>
+                    
                 </h1>
 
+                <h2>
+
+                </h2>
 
 
-                <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-20 sm:mb-30">
+
+                <div className="mt-20 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-20 sm:mb-30">
                     <a
                         href="#contact"
                         className="flex px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-200 transition-all"
                     >
-                        Let's Connect <ArrowRight/>
+                        Let's Connect <ArrowRight />
                     </a>
                     <a
                         href="mailto:vighneshsalunkhe949@gmail.com"

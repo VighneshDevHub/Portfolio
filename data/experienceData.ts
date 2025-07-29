@@ -140,7 +140,7 @@ export const experienceData: ExperienceItem[] = [
     id: 3.3,
     role: "Certificate Of Completion",
     company: "V2V EDTECH LLP",
-    date: "May 2022",
+    date: "June 2024 - July 2024",
     location: "Remote",
     category: "Certifications",
     summary: "As an Android Development Intern at V2V EDTECH LLP, I contributed to the design, development, and testing of multiple Android applications.",

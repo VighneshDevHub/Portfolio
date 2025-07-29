@@ -33,7 +33,8 @@ const testimonials: Testimonial[] = [
     image: "/Images/labtocat.png"
   },
 
-  { id: 4,
+  {
+    id: 4,
     name: "Sakshi Joshi",
     role: "Student, Goverment Polytechnic Thane",
     testimonial: "Their innovative approach and problem-solving skills made a significant impact on our project. Truly impressed!",
@@ -60,25 +61,24 @@ const Testimonials: React.FC = () => {
         </div>
 
         <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
-          Kind words from <span className="text-purple-500">satisfied clients</span>
+          Words from People I’ve <span className="text-purple-500">  Worked With</span>
         </h3>
-        <p className="text-gray-400 text-lg mt-2">
-          Don't just take my word for it. Hear what my clients have to say about working with me.
-        </p>
+        <p className="text-gray-400 text-lg mt-2 max-w-2xl mx-auto">
+          Feedback from mentors, teammates, and collaborators on how I deliver value through code, communication, and consistency.        </p>
       </div>
 
       <div className="h-2/5 mt-10 rounded-md flex flex-col antialiased dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="left"
-        speed="fast"
-      />
-      <InfiniteMovingCards
-        items={testimonials}
-        direction="right"
-        speed="fast"
-      />
-    </div>
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="left"
+          speed="fast"
+        />
+        <InfiniteMovingCards
+          items={testimonials}
+          direction="right"
+          speed="fast"
+        />
+      </div>
     </section>
   )
 }

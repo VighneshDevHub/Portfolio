@@ -74,18 +74,18 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
             <div className="relative pl-12 md:pl-20 pr-2 md:pr-4 w-full">
               
               
-              <h3 className="text-xl md:text-2xl font-semibold text-white">
+              <h3 className="text-xl md:text-2xl font-medium text-white">
                 {item.role}
               </h3>
-              <p className="flex text-xs md:text-sm text-purple-300 mb-1 ">{item.company} <span className="flex ml-3 gap-1"> <Calendar className="w-4 h-4"/> {item.date}</span></p>
+              <p className="flex" > <span className=" text-xs md:text-lg font-semibold text-purple-300 mb-1 ">{item.company}</span> <span className="flex ml-3 gap-1.5"> <Calendar className="w-4 h-4 mt-1"/> {item.date}</span></p>
               {item.location && (
-                <p className="text-xs text-neutral-400 mb-2 italic">{item.location}</p>
+                <p className="text-[1rem] text-neutral-400 mb-2 italic">{item.location}</p>
               )}
 
-              <p className="text-xs md:text-sm text-gray-300 mb-4 w-xl">{item.summary}</p>
+              <p className="text-xs md:text-base text-gray-300 mb-4 w-xl">{item.summary}</p>
 
               {item.achievements?.length ? (
-                <ul className=" list-inside text-xs md:text-sm text-white space-y-1 mb-4">
+                <ul className=" list-inside text-xs md:text-base  space-y-1 mb-4">
                   {item.achievements.map((point, idx) => (
                      <li key={idx} className="break-words"><span className="flex gap-2"><CheckCircle className="h-4 w-4 text-green-400"/>{point}</span></li>
                   ))}

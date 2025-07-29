@@ -9,10 +9,11 @@ export const metadata = {
   description: "Full Stack Developer Portfolio",
 }
 
-const outfit = Outfit ({
+const outfit = Outfit({
   subsets: ['latin'],
-  weight: ['300','400','500', '600', '700'],
-  display:'swap'
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-outfit',
+  display: 'swap'
 })
 
 interface RootLayoutProps {
@@ -21,7 +22,7 @@ interface RootLayoutProps {
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en" className={outfit.className}>
+    <html lang="en" className={outfit.variable}>
       <body className="relative min-h-screen w-full bg-[#0a1026] text-white">
         {/* Background Gradient */}
         <div className="pointer-events-none fixed inset-0 z-0">

@@ -71,8 +71,8 @@ const BlogSection: React.FC = () => {
         <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
           Latest <span className="text-purple-500">Blogs</span>
         </h3>
-        <p className="text-gray-400 text-lg mt-2">
-          Explore tech, design, and strategies behind modern builds
+        <p className="text-gray-400 text-lg mt-1 max-w-2xl mx-auto">
+          Sharing thoughts on technology, development, AI trends, and lessons from <br />real-world projects.
         </p>
       </div>
 

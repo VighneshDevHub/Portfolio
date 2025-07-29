@@ -34,7 +34,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
   contentClassName = "bg-white/5 backdrop-blur-xl ring-1 ring-white/10 rounded-2xl p-4",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const cardRefs = useRef<Array<HTMLDivElement | null>>([]);
   const [activeCard, setActiveCard] = useState<number>(0);
 
   useEffect(() => {
@@ -73,7 +73,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full flex flex-col lg:flex-row h-auto lg:h-[36rem] gap-5 lg:gap-10 px-4 sm:px-6 lg:px-2 overflow-y-auto lg:overflow-y-scroll scrollbar-hide p-3 sm:p-4 lg:p-5"
+      className="relative w-full flex flex-col lg:flex-row  lg:h-[40rem] gap-5 lg:gap-10 px-4 sm:px-6 lg:px-2 overflow-y-auto lg:overflow-y-scroll scrollbar-hide p-3 sm:p-4 lg:p-5 "
     >
       {/* Mobile View: Project Navigation (visible only on small screens) */}
       <div className="lg:hidden w-full mb-6 flex justify-center">
@@ -82,8 +82,8 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
             <button
               key={index}
               onClick={() => setActiveCard(index)}
-              className={`px-3 py-1 text-xs rounded-full whitespace-nowrap ${activeCard === index 
-                ? 'bg-indigo-600 text-white' 
+              className={`px-3 py-1 text-xs rounded-full whitespace-nowrap ${activeCard === index
+                ? 'bg-indigo-600 text-white'
                 : 'bg-white/10 text-slate-300 hover:bg-white/20'}`}
             >
               {item.title}
@@ -93,18 +93,20 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
       </div>
 
       {/* Left: Scrollable Cards (hidden on mobile) */}
-      <div className="hidden lg:flex flex-col space-y-30 w-full lg:w-4/5 p-2 sm:p-3 lg:p-5 rounded-xl">
+      <div className="hidden lg:flex flex-col space-y-30 w-full lg:w-4/5 p-2 sm:p-3 lg:p-5 rounded-xl ">
         {content.map((item, index) => (
           <div
             key={index}
-            ref={(el) => (cardRefs.current[index] = el)}
+            ref={(el) => {
+              if (el) cardRefs.current[index] = el;
+            }}
             style={{
               opacity: activeCard === index ? 1 : 0.5,
               transform: activeCard === index ? "scale(1.03)" : "scale(1)",
               transition: "opacity 0.3s, transform 0.3s",
             }}
             className={twMerge(
-              "rounded-xl p-3 sm:p-4 min-h-[400px] lg:min-h-[500px] flex items-center justify-center",
+              "rounded-xl p-3 sm:p-4 min-h-[400px] lg:min-h-[550px] flex items-center justify-center",
               contentClassName
             )}
           >
@@ -140,7 +142,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-xs sm:text-sm text-slate-300"
+              className="text-xl sm:text-base text-slate-300"
             >
               {content[activeCard].description}
             </motion.p>
@@ -152,7 +154,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
                   {content[activeCard].features.map((feature, i) => (
                     <li
                       key={i}
-                      className="flex items-center gap-2 text-slate-200 text-xs sm:text-sm"
+                      className="flex items-center gap-2 text-slate-200 text-lg sm:text-base"
                     >
                       {feature.icon}
                       <span>{feature.label}</span>
@@ -164,7 +166,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
 
             {content[activeCard].tech && (
               <div className="space-y-2 mt-3 lg:mt-4">
-                <p className="text-slate-400 font-semibold text-sm">Tech Stack:</p>
+                <p className="text-slate-400 font-semibold text-base">Tech Stack:</p>
                 <ul className="flex flex-wrap gap-2 text-xs">
                   {content[activeCard].tech.map((tech, i) => (
                     <li
