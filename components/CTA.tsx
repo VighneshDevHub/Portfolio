@@ -20,10 +20,10 @@ const CTA: React.FC = () => {
                         </button>
                     </div>
 
-                    <p className="text-neutral-600 w-full font-semibold text-center text-xs sm:text-sm md:text-xl lg:text-2xl text-shadow-amber-700 dark:text-neutral-200 mt-3 md:mt-4">
+                    <p className="text-neutral-600 w-full font-semibold text-center text-x sm:text-sm md:text-xl lg:text-2xl text-shadow-amber-700 dark:text-neutral-200 mt-3 md:mt-4">
                         I'm available for full-time roles & freelance projects.
                     </p>
-                    <p className="text-neutral-600  dark:text-neutral-200  font-normal opacity-70 text- sm:text-sm md:text-base lg:text-lg text-center mt-3 md:mt-4">
+                    <p className="text-neutral-600  dark:text-neutral-200  font-normal opacity-70 text-[0.9rem] sm:text-sm md:text-base lg:text-lg text-center mt-3 md:mt-4">
                         I'm always open to discussing new opportunities, creative ideas, or collaborative projects. 
                         <span className="hidden sm:inline"></span> Let's connect, collaborate, or create something impactful.
                     </p>

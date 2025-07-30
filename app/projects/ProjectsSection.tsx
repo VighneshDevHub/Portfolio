@@ -169,6 +169,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <span>{project.projectType}</span>
         </HoverBorderGradient>
       </div>
+      
 
       {/* Project Content */}
       <div className="flex flex-col flex-grow p-5 sm:p-6">
