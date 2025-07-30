@@ -64,11 +64,11 @@ const BlogSection: React.FC = () => {
             as="button"
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <span className="text-white text-sm font-semibold ">Blogs & Articles</span>
+            <span className="text-white text-sm  py-0.5">Blogs & Articles</span>
           </HoverBorderGradient>
         </div>
 
-        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
+        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight mt-2">
           Latest <span className="text-purple-500">Blogs</span>
         </h3>
         <p className="text-gray-400 text-lg mt-1 max-w-2xl mx-auto">

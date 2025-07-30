@@ -16,7 +16,7 @@ export const experienceData: ExperienceItem[] = [
     id: 1.1,
     role: "Data Analyst",
     company: "Deloitte",
-    date: "May 22 - Jun 24",
+    date: "May 22nd  - Jun 24th",
     location: "Remote",
     category: "Work",
     summary: "This experience sharpened my analytical mindset and deepened my understanding of how data drives strategy in the consulting world.",

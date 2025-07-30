@@ -260,7 +260,7 @@ export function ProjectsSection(): React.ReactElement {
             as="button"
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <span className="text-white text-xs sm:text-sm font-semibold px-3 py-1">My Work</span>
+            <span className="text-white text-xs sm:text-sm  ">My Work</span>
           </HoverBorderGradient>
         </div>
 

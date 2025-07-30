@@ -56,11 +56,11 @@ const Testimonials: React.FC = () => {
             as="button"
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <span className="text-white text-sm font-semibold">Testimonials</span>
+            <span className="text-white text-sm font-semibold py-0.5">Testimonials</span>
           </HoverBorderGradient>
         </div>
 
-        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight">
+        <h3 className="text-4xl md:text-6xl font-extrabold leading-tight ">
           Words from People I’ve <span className="text-purple-500">  Worked With</span>
         </h3>
         <p className="text-gray-400 text-lg mt-2 max-w-2xl mx-auto">

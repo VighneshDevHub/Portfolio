@@ -98,7 +98,7 @@ export function SkillSection() {
 
   return (
     <section id="skills" className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16 md:py-20 text-white mb-6 sm:mb-8 md:mb-10">
-      <div className="text-center mb-8 sm:mb-10 md:mb-14">
+      <div className="text-center mb-8 sm:mb-10 md:mb-10">
 
         <div className="flex justify-center text-center">
           <HoverBorderGradient
@@ -106,11 +106,11 @@ export function SkillSection() {
             as="button"
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 "
           >
-            <span className="text-white text-xs sm:text-sm font-semibold">My Skills</span>
+            <span className="text-white text-xs sm:text-sm py-0.5">My Skills</span>
           </HoverBorderGradient>
         </div>
 
-        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-4 sm:mt-6">
+        <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mt-2">
           My Secret <span className="text-purple-500">Sauce</span>
         </h3>
         <p className="text-gray-400 text-base sm:text-lg mt-1 sm:mt-3 px-2 max-w-2xl mx-auto">
@@ -119,7 +119,7 @@ export function SkillSection() {
         </p>
       </div>
 
-      <div className="flex gap-2 sm:gap-3 flex-wrap items-center justify-center mb-4 sm:mb-6">
+      <div className="flex gap-2 sm:gap-3 flex-wrap  justify-center mb-4 sm:mb-6">
         {skillData.map((cat) => (
           <button
             key={cat.category}
