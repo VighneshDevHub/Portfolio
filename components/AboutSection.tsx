@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { JSX, ReactNode } from "react";
 import { Box, Code, HeartHandshake, Globe, Sparkles } from "lucide-react";
 import { GlowingEffect } from "./ui/GlowingEffect";
 import { SiNextdotjs, SiReact, SiTypescript, SiJavascript, SiRedux, SiNodedotjs, SiPython, SiTailwindcss, SiMongodb, SiFramer, SiGit, SiGithub, SiExpress } from "react-icons/si";
