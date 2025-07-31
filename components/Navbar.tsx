@@ -85,6 +85,7 @@ export default function Navbar(): JSX.Element {
           className="md:hidden text-white focus:outline-none hover:bg-white/10 p-2 rounded-lg transition-colors" 
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
+          suppressHydrationWarning
         >
           {isOpen ? <HiX size={24} /> : <HiMenu size={24} />}
         </button>

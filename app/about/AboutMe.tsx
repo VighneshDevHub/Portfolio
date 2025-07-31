@@ -6,6 +6,7 @@ import { SiX, SiLinkedin, SiGithub, SiMailboxdotorg } from "react-icons/si";
 import { FaHeart, FaRegEnvelope } from "react-icons/fa";
 import { FlipWords } from '@/components/ui/FlipWords';
 import { AuroraText } from '@/components/magicui/aurora-text';
+import CardCarousel from '@/components/ui/CardCarousel';
 
 const AboutMe: React.FC = () => {
   const words = ["Full Stack Developer", "AI/ML Enthusiast", "Mobile App Developer", "UI/UX Designer", "Freelancer"];
@@ -68,18 +69,11 @@ const AboutMe: React.FC = () => {
           </div>
 
         </div>
-        {/* Image Section */}
-        <div className="relative w-full md:w-1/2">
-          <div className="rounded-2xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white/5 backdrop-blur-lg">
-            <Image
-              src="/Images/Batman.png" // replace with your image
-              alt="Vighnesh Portrait"
-              width={500}
-              height={500}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
+        {/* Image Section (replace this block) */}
+<div className="relative w-full md:w-1/2 flex items-center justify-center">
+  <CardCarousel />
+</div>
+
 
 
       </div>

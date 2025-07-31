@@ -8,7 +8,7 @@ interface ThemeToggleProps {
 const ThemeToggle: React.FC<ThemeToggleProps> = () => {
   return (
     <div>
-      <button className="p-2 rounded-full hover:bg-white/10 transition">
+      <button className="p-2 rounded-full hover:bg-white/10 transition" suppressHydrationWarning>
         <BsFillMoonStarsFill className="text-xl text-white/80" />
       </button>
     </div>
