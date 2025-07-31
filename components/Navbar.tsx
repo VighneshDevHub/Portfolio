@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, JSX } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiMenu, HiX } from "react-icons/hi";
@@ -69,12 +69,12 @@ export default function Navbar(): JSX.Element {
       {/* Mobile menu backdrop */}
       {isOpen && (
         <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300"
+          className=" fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden transition-opacity duration-300"
           aria-hidden="true"
         />
       )}
       
-      <nav id="navbar" className={`fixed z-50 w-full px-4 md:px-8 py-4 transition-all duration-300 ${scrolled || isOpen ? 'bg-black/50' : 'bg-black/30'} backdrop-blur-lg shadow-md border border-white/10 rounded-2xl max-w-6xl mx-auto left-1/2 -translate-x-1/2 top-5`}>
+      <nav id="navbar" className={`fixed z-50 w-full px-4 md:px-8 py-4 transition-all duration-300 ${scrolled || isOpen ? 'bg-black/50' : 'bg-black/30'} backdrop-blur-lg shadow-md border border-white/10 lg:rounded-2xl rounded-b-2xl max-w-6xl mx-auto left-1/2 -translate-x-1/2 lg:top-5`}>
       <div className="flex items-center justify-between">
         <Link href="/" className="text-lg sm:text-xl font-bold text-white tracking-tight hover:text-white/80 transition-colors">
           Vighnesh Salunkhe

@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from "next/link"
-import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaArrowRight } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone, FaArrowRight, FaFileAlt, FaCode } from "react-icons/fa"
 import { FlipWords } from './ui/FlipWords';
 import { HoverBorderGradient } from './ui/HoverBorderGradient';
 import { ArrowRight } from 'lucide-react';
@@ -50,20 +50,31 @@ const Hero: React.FC = () => {
 
 
 
-                <div className="mt-12 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-16 sm:mb-20">
-                    <a
-                        href="#contact"
+                <div className="mt-12   md:max-w-full lg:max-w-full sm:mt-8 flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center mb-16 sm:mb-20">
+                    <Link
+                        href="/contact"
                         className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-black text-sm sm:text-base font-semibold hover:bg-gray-200 transition-all"
                     >
                         Let's Connect <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
+                    </Link>
+                    {/* Resume Button */}
                     <a
-                        href="mailto:vighneshsalunkhe949@gmail.com"
-                        className="flex items-center justify-center gap-1.5 sm:gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full border border-white/20 hover:bg-white/10 transition-all text-sm sm:text-base overflow-hidden"
+                        href="/Vighnesh_Salunkhe_Resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-transparent border border-white/20 hover:bg-white/10 text-sm sm:text-base transition-all"
                     >
-                        <FaEnvelope className="flex-shrink-0" />
-                        <span className="hidden sm:inline truncate">vighneshsalunkhe949@gmail.com</span>
-                        <span className="sm:hidden">Email Me</span>
+                        <FaFileAlt className="w-4 h-4" />
+                        Resume
+                    </a>
+
+                    {/* Projects Button */}
+                    <a
+                        href="#projectscroll"
+                        className="flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm sm:text-base transition-all"
+                    >
+                        <FaCode className="w-4 h-4" />
+                        View Projects
                     </a>
                 </div>
 

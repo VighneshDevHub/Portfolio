@@ -16,8 +16,6 @@ const AboutMe: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row  justify-center items-center gap-20 px-">
 
 
-
-
         {/* Bio Text */}
         <div className="w-full md:w-6/8 space-y-6 ">
           <div className=" flex  text-center">

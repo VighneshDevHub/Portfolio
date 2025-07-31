@@ -41,16 +41,16 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
 
   return (
     <div
-      className="w-full bg-whitefont-sans px-3 sm:px-5 md:px-10 flex flex-col"
+      className="w-full bg-whitefont-sans px-3 sm:px-5 md:px-10 flex flex-col "
       ref={containerRef}>
-      <div className="max-w-9xl py-4 sm:py-6 md:px-8 lg:px-10">
+      <div className="max-w-9xl py-4 sm:py-6 md:px-8 lg:px-8">
         <h2 className="text-lg sm:text-2xl md:text-4xl mb-2 sm:mb-4 text-black dark:text-white max-w-5xl font-bold">
-          Changelog from my journey 
+          Changelog from my journey
         </h2>
         <p
           className="text-neutral-700 dark:text-neutral-300 text-sm sm:text-base md:text-lg max-w-sm md:max-w-md">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+          A timeline of my career path and the valuable experiences that have shaped my expertise.
+
         </p>
       </div>
       <div ref={ref} className="relative max-w-8xl mx-auto pb-10 sm:pb-20">
@@ -66,21 +66,21 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
                   className="h-2 w-2 sm:h-3 sm:w-3 md:h-4 md:w-4 rounded-full bg-purple-500 dark:bg-purple-400 border border-purple-300 dark:border-purple-700 p-1 sm:p-1.5" />
               </div>
               <h3
-                className="hidden md:block text-base lg:text-xl md:pl-16 lg:pl-20 md:text-2xl lg:text-3xl font-bold text-neutral-400 dark:text-neutral-400">
+                className="hidden md:block text-base  md:pl-16 lg:pl-20 md:text-2xl lg:text-3xl font-bold text-neutral-400 dark:text-neutral-400">
                 {item.date}
               </h3>
             </div>
 
             <div className="relative pl-7 sm:pl-10 md:pl-16 lg:pl-20 pr-1 sm:pr-2 md:pr-4 w-full">
-              
-              
+
+
               <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl font-medium text-white">
                 {item.role}
               </h3>
-              <p className="flex flex-col sm:flex-row sm:items-center mt-1" > 
-                <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-purple-300 mb-1">{item.company}</span> 
-                <span className="flex sm:ml-3 gap-1 sm:gap-1.5 text-[10px] sm:text-xs md:text-sm items-center"> 
-                  <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4"/> 
+              <p className="flex flex-col sm:flex-row sm:items-center mt-1" >
+                <span className="text-xs sm:text-sm md:text-base lg:text-lg font-semibold text-purple-300 mb-1">{item.company}</span>
+                <span className="flex sm:ml-3 gap-1 sm:gap-1.5 text-[10px] sm:text-xs md:text-sm items-center">
+                  <Calendar className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />
                   {item.date}
                 </span>
               </p>
@@ -93,13 +93,13 @@ export const Timeline: React.FC<TimelineProps> = ({ data }) => {
               {item.achievements?.length ? (
                 <ul className="list-inside text-[11px] sm:text-xs md:text-sm lg:text-base space-y-1 sm:space-y-1.5 mb-2 sm:mb-3 md:mb-4 max-w-3xl">
                   {item.achievements.map((point, idx) => (
-                     <li key={idx} className="break-words"><span className="flex gap-1 sm:gap-1.5 md:gap-2 items-start">
-                       <CheckCircle className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-green-400 mt-0.5 flex-shrink-0"/>
-                       <span>{point}</span>
-                     </span></li>
+                    <li key={idx} className="break-words"><span className="flex gap-1 sm:gap-1.5 md:gap-2 items-start">
+                      <CheckCircle className="h-2.5 w-2.5 sm:h-3 sm:w-3 md:h-4 md:w-4 text-green-400 mt-0.5 flex-shrink-0" />
+                      <span>{point}</span>
+                    </span></li>
                   ))}
                 </ul>
-              ): null}
+              ) : null}
               {item.images && item.images.length > 0 && (
                 <div className="mt-2 sm:mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-1.5 sm:gap-2 md:gap-3">
                   {item.images.map((img, index) => (

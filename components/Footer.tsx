@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         {/* Personal Intro */}
         <div>
           <h2 className="text-lg font-semibold mb-2">Vighnesh Salunkhe</h2>
-          <p className="text-white/70 text-sm">
+          <p className="text-white/70 ">
             Full Stack Developer & AI Explorer based in India. Passionate about
             building scalable, fast, and future-proof digital solutions.
           </p>
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         {/* Quick Links */}
         <div>
           <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
-          <ul className="space-y-2 text-sm text-white/70">
+          <ul className="space-y-2 text-[1rem] text-white/70">
             <li>
               <Link href="/about">About Me</Link>
             </li>
@@ -63,12 +63,12 @@ const Footer: React.FC = () => {
 
         {/* Placeholder or Additional Info */}
         <div>
-          <h2 className="text-lg font-semibold mb-2">Tech Stack</h2>
-          <p className="text-white/70 text-sm">
-            Built using Next.js, Tailwind CSS, TypeScript and deployed on
-            Vercel.
-          </p>
-        </div>
+  <h2 className="text-lg font-semibold mb-2">Availability</h2>
+  <p className="text-white/70 text-sm">
+    Currently open to freelance projects, collaborations, and full-time roles. Let's build something impactful together.
+  </p>
+</div>
+
       </div>
 
       {/* Bottom Bar */}

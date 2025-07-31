@@ -9,7 +9,7 @@ import { Code, Globe, Database, Smartphone, BarChart3 } from 'lucide-react';
 
 // Category icons mapping
 const getCategoryIcon = (category: string) => {
-  switch(category) {
+  switch (category) {
     case 'Full Stack Web App':
       return <Globe className="w-4 h-4 mr-2" />;
     case 'Frontend Web App':
@@ -32,10 +32,10 @@ const ProjectsSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [filteredProjects, setFilteredProjects] = useState<Project[]>(projects);
   const [isFiltering, setIsFiltering] = useState(false);
-  
+
   useEffect(() => {
     setIsFiltering(true);
-    
+
     const filterTimer = setTimeout(() => {
       if (selectedCategory === 'All') {
         setFilteredProjects(projects);
@@ -44,20 +44,30 @@ const ProjectsSection: React.FC = () => {
       }
       setIsFiltering(false);
     }, 300);
-    
+
     return () => clearTimeout(filterTimer);
   }, [selectedCategory]);
 
   return (
     <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 sm:py-16">
+
+      <div className="flex justify-center mb-5">
+        <HoverBorderGradient
+          containerClassName="rounded-full"
+          as="div"
+          className="bg-black/50 backdrop-blur-sm text-white px-4 py-1"
+        >
+          <span className="text-sm">Browse My Work</span>
+        </HoverBorderGradient>
+      </div>
       {/* Filter Categories */}
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
         {categories.map((category) => (
           <button
             key={category}
             onClick={() => setSelectedCategory(category)}
-            className={`flex items-center px-4 py-2 rounded-full text-sm sm:text-base transition-all duration-300 ${selectedCategory === category 
-              ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/20' 
+            className={`flex items-center px-4 py-2 rounded-full text-sm sm:text-base transition-all duration-300 ${selectedCategory === category
+              ? 'bg-purple-600 text-white shadow-lg shadow-purple-500/20'
               : 'bg-gray-800 text-gray-300 hover:bg-gray-700 hover:shadow-md hover:shadow-purple-500/10'}`}
           >
             {category !== 'All' ? getCategoryIcon(category) : null}
@@ -92,7 +102,7 @@ const ProjectsSection: React.FC = () => {
         ) : (
           <AnimatePresence mode="wait">
             {filteredProjects.length > 0 ? (
-              <motion.div 
+              <motion.div
                 key={selectedCategory}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -105,7 +115,7 @@ const ProjectsSection: React.FC = () => {
                 ))}
               </motion.div>
             ) : (
-              <motion.div 
+              <motion.div
                 key="no-projects"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -113,8 +123,8 @@ const ProjectsSection: React.FC = () => {
                 className="text-center py-12"
               >
                 <h3 className="text-xl text-gray-400">No projects found in this category</h3>
-                <button 
-                  onClick={() => setSelectedCategory('All')} 
+                <button
+                  onClick={() => setSelectedCategory('All')}
                   className="mt-4 px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition-colors"
                 >
                   View All Projects
@@ -134,7 +144,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
@@ -143,8 +153,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     >
       {/* Project Image */}
       <div className="relative h-48 sm:h-56 w-full overflow-hidden">
-        <Image 
-          src={project.coverImage} 
+        <Image
+          src={project.coverImage}
           alt={project.title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -169,13 +179,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <span>{project.projectType}</span>
         </HoverBorderGradient>
       </div>
-      
+
 
       {/* Project Content */}
       <div className="flex flex-col flex-grow p-5 sm:p-6">
         <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white group-hover:text-purple-300 transition-colors duration-300">{project.title}</h3>
         <p className="text-gray-400 text-sm sm:text-base mb-4 flex-grow">{project.description}</p>
-        
+
         {/* Tech Stack */}
         <div className="mb-4">
           <h4 className="text-sm text-gray-500 mb-2 flex items-center">

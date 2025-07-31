@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { section } from "motion/react-client";
 
 interface Feature {
   icon: React.ReactNode;
@@ -98,7 +99,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
   }, []);
 
   return (
-    <div
+    <div id='projectscroll'
       ref={containerRef}
       className="relative w-full flex flex-col lg:flex-row lg:h-[40rem] xl:h-[45rem] 2xl:h-[50rem] gap-5 lg:gap-10 px-4 sm:px-6 lg:px-2 overflow-y-auto lg:overflow-y-scroll scrollbar-hide p-3 sm:p-4 lg:p-5 max-w-[100vw] mx-auto"
     >
@@ -142,7 +143,7 @@ export const StickyScroll: React.FC<StickyScrollProps> = ({
               transition: "opacity 0.3s, transform 0.3s",
             }}
             className={twMerge(
-              "rounded-xl p-3 sm:p-4 min-h-[400px] lg:min-h-[550px] xl:min-h-[600px] flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300",
+              "rounded-xl p-3 sm:p-4 min-h-[400px] lg:m-h-[550px] xl:min-h-[600px] flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300",
               contentClassName
             )}
           >
