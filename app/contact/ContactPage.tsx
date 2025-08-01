@@ -161,11 +161,11 @@ export default function ContactPage() {
               <div>
                 <HoverBorderGradient 
                   as="div"
-                  className="px-6 py-3 text-base"
+                  className="px-6 py-3 text-base hover:cursor-pointer"
                 >
                   <button
                     type="submit"
-                    className="flex items-center gap-2 text-white font-medium"
+                    className="flex items-center gap-2 text-white font-medium hover:cursor-pointer"
                     disabled={loading}
                     suppressHydrationWarning
                   >

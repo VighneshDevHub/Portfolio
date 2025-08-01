@@ -9,7 +9,7 @@ const cards = [
   { img: "/Images/coder.jpg", text: "I Code" },
   { img: "/Images/batman.png", text: "I Gym" },
   { img: "/Images/labtocat.png", text: "I Eat" },
-   { img: "/Images/batman.png", text: "I Gym" },
+  { img: "/Images/batman.png", text: "I Gym " },
 ];
 
 const CardCarousel = () => {
@@ -33,17 +33,17 @@ const CardCarousel = () => {
       case 0:
         return "z-30 scale-100 translate-x-0 rotate-0 opacity-100";
       case 1:
-        return "z-20 scale-90 -translate-x-16 -rotate-6 opacity-40";
+        return "z-20 scale-90 -translate-x-12 sm:-translate-x-16 -rotate-6 opacity-40";
       case 2:
-        return "z-10 scale-90 translate-x-16 rotate-6 opacity-40";
+        return "z-10 scale-90 translate-x-12 sm:translate-x-16 rotate-6 opacity-40";
       default:
         return "hidden";
     }
   };
 
   return (
-    <div className="w-full flex flex-col items-center justify-center">
-      <div className="relative w-[300px] h-[420px] sm:w-[340px] sm:h-[400px]">
+    <div className="w-full flex flex-col items-center justify-center px-4">
+      <div className="relative w-[90%] max-w-[320px] sm:max-w-[360px] md:max-w-[400px] h-[400px] sm:h-[420px]">
         {cards.map((card, index) => (
           <motion.div
             key={index}
@@ -54,6 +54,7 @@ const CardCarousel = () => {
               alt={card.text}
               fill
               className="object-cover rounded-3xl"
+              sizes="(max-width: 768px) 100vw, 360px"
             />
           </motion.div>
         ))}
@@ -67,7 +68,7 @@ const CardCarousel = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
-            className="text-white text-lg sm:text-xl font-semibold text-center"
+            className="text-white text-base sm:text-lg md:text-xl font-semibold text-center"
           >
             {cards[currentIndex].text}
           </motion.p>

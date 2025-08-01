@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
              before:opacity-60"
             >
                 <div
-                    className="absolute top-[35%] -left-1/2 w-[200%] h-[800px] sm:h-[1200px] md:h-[1500px] lg:h-[1800px]  
+                    className="absolute lg:top-[35%] top-[35%] -left-1/2 w-[200%] h-[800px] sm:h-[1200px] md:h-[1500px] lg:h-[1800px]  
                rounded-[100%] border-t-[1px] sm:border-t-2 md:border-t-3 lg:border-t-4 border-t-white bg-[#0a0a0a] 
                shadow-[inset_0_1px_10px_white,0_-3px_8px_4px_rgba(255,255,255,0.25)] 
                sm:shadow-[inset_0_1px_15px_white,0_-4px_10px_5px_rgba(255,255,255,0.3)] 

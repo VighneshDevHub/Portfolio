@@ -1,19 +1,19 @@
 import { Project, projects } from "@/data/projectData";
 import { notFound } from "next/navigation";
 import Image from "next/image";
-import { Github, ExternalLink, CheckCircle, Award} from "lucide-react";
+import { Github, ExternalLink, CheckCircle, Award } from "lucide-react";
 import React from "react";
 
 interface ProjectDetailPageProps {
-  params: {
-    slug: string;
-  };
+    params: {
+        slug: string;
+    };
 }
 
 const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
-    const slug = params.slug; 
+    const slug = params.slug;
     const project = projects.find((proj) => proj.slug === slug);
-    
+
     if (!project) return notFound();
 
     return (
@@ -22,8 +22,13 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
             <section className="lg:col-span-8">
                 {/* Title & Description */}
                 <div className="mb-8">
-                    <h1 className="text-5xl font-extrabold gradient-text">{project.title}</h1>
-                    <p className="text-lg text-gray-300 mt-4 max-w-2xl">{project.description}</p>
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold gradient-text leading-tight">
+                        {project.title}
+                    </h1>
+                    <p className="text-base sm:text-lg text-gray-300 mt-4 max-w-2xl">
+                        {project.description}
+                    </p>
+
                 </div>
 
                 {/* Cover Image */}
@@ -33,7 +38,7 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
                         alt={`${project.title} Cover Image`}
                         width={1200}
                         height={500}
-                        className="w-full h-[400px] object-cover hover:scale-105 transition-transform duration-500"
+                        className="w-full h-[220px] sm:h-[300px] md:h-[400px] object-cover hover:scale-105 transition-transform duration-500"
                         priority
                     />
                 </div>
@@ -110,13 +115,12 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
                     <div className="text-sm text-gray-400 flex items-center gap-2">
                         <span className="font-medium text-white">Status:</span>
                         <span
-                            className={`px-2 py-0.5 text-xs font-medium rounded-full ${
-                                project.status === "Completed"
-                                    ? "bg-green-700 text-white"
-                                    : project.status === "In Progress"
+                            className={`px-2 py-0.5 text-xs font-medium rounded-full ${project.status === "Completed"
+                                ? "bg-green-700 text-white"
+                                : project.status === "In Progress"
                                     ? "bg-yellow-600 text-black"
                                     : "bg-gray-600 text-white"
-                            }`}
+                                }`}
                         >
                             {project.status}
                         </span>
